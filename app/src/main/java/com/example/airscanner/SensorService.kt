@@ -10,5 +10,4 @@ interface SensorService{
     @GET("station/sensors/{stationId}")
 
     fun getSensors(@Path("stationId") stationId: String): Call<List<Sensor>>
-
 }

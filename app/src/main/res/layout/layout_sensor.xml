@@ -5,12 +5,12 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/station_of_sensor_layout"
+        android:id="@+id/station_of_sensor_name_layout"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:paddingTop="8dp"
         android:paddingLeft="10dp"
+        android:paddingTop="8dp"
         android:textAlignment="center"
         tools:text="NameOfTheStation" />
 

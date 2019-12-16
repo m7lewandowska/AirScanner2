@@ -1,13 +1,11 @@
 package com.example.airscanner
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import android.widget.Toast
 
 class SensorAdapter(private val context: Context, private val dataSource: List<Sensor>): BaseAdapter()
 {
@@ -19,7 +17,7 @@ class SensorAdapter(private val context: Context, private val dataSource: List<S
 
         val sensorParamCode = rowView.findViewById(R.id.sensor_paramCode_layout) as TextView
         val sensorParamName = rowView.findViewById(R.id.sensor_paramName_layout) as TextView
-        val stationName = rowView.findViewById(R.id.station_of_sensor_layout) as TextView
+        val stationName = rowView.findViewById(R.id.station_of_sensor_name_layout) as TextView
 
 
         val sensor = getItem(position) as Sensor

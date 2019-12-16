@@ -27,11 +27,9 @@ class SensorActivity : AppCompatActivity() {
 
 
         var stationID = intent.getStringExtra("stationID")
-       // var stationNAME = intent.getStringExtra("stationNAME")
+        var stationNAME = intent.getStringExtra("stationNAME")
         //Toast.makeText(this, stationID, Toast.LENGTH_LONG).show()
-
-          //station_of_sensor_layout.text = stationNAME.toString()
-
+        //station_of_sensor_name_layout.text = stationNAME.toString()
 
         val BASE_URL = "http://api.gios.gov.pl/pjp-api/rest/"
 
