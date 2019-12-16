@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
        val client = retrofit.create(StationService::class.java)
 
         client.getStations().enqueue(object: Callback<List<Station>>{
+
             override fun onFailure(call: Call<List<Station>>, t: Throwable) {
                 Toast.makeText(this@MainActivity,"Failure: " + t.message,Toast.LENGTH_LONG).show()
                 Log.e("marta",t.message)
