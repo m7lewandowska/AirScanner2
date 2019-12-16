@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import com.google.gson.Gson
 
 class SensorAdapter(private val context: Context, private val dataSource: List<Sensor>): BaseAdapter()
 {
