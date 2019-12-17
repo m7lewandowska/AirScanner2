@@ -24,8 +24,8 @@ class SensorAdapter(private val context: Context, private val dataSource: List<S
         val sensor = getItem(position) as Sensor
 
         stationName.text = sensor.stationName
-        sensorParamCode.text = sensor.paramCode
-        sensorParamName.text = sensor.paramName
+        sensorParamCode.text = sensor.param.paramCode
+        sensorParamName.text = sensor.param.paramName
 
         rowView.setOnClickListener {
 
