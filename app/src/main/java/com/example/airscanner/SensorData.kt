@@ -7,7 +7,7 @@ data class SensorData(
     val key:String,
 
     @SerializedName("values")
-    val values:Values
+    val values:List<Values>
 
 )
 

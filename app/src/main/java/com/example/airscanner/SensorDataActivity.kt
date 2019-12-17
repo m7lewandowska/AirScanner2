@@ -43,8 +43,8 @@ class SensorDataActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<List<SensorData>>, response: Response<List<SensorData>>) {
 
-                AddToListView(response.body()!!)
-
+                //AddToListView(response.body()!!)
+                AddToListView(response.body()!!.values)
             }
         })
 
