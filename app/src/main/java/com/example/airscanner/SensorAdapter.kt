@@ -1,6 +1,7 @@
 package com.example.airscanner
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,7 +31,7 @@ class SensorAdapter(private val context: Context, private val dataSource: List<S
         rowView.setOnClickListener {
 
             // Toast.makeText(context, "Another activity ", Toast.LENGTH_LONG).show()
-            //changeActivity(context, station.id.toString(), station.stationName.toString())
+            changeActivity(context, sensor.id)
         }
 
         return rowView
@@ -48,16 +49,15 @@ class SensorAdapter(private val context: Context, private val dataSource: List<S
         return position.toLong()
     }
 
-//    companion object {
-//        fun changeActivity(context: Context, stationid: String, stationname: String) {
-//
-//            val intent = Intent(context, SensorActivity::class.java)
-//            intent.putExtra("stationID", stationid)
-//            intent.putExtra("stationNAME", stationname)
-//            context.startActivity(intent)
-//
-//        }
-//    }
+    companion object {
+        fun changeActivity(context: Context, sensorid: String) {
+
+            val intent = Intent(context, SensorDataActivity::class.java)
+            intent.putExtra("sensorid", sensorid)
+            context.startActivity(intent)
+
+        }
+    }
 
 
 }
