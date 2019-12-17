@@ -6,11 +6,9 @@ data class Sensor(
     @SerializedName("stationName")
     val stationName:String,
 
-//    @SerializedName("paramName")
-//    val paramName:String,
-//
-//    @SerializedName("paramCode")
-//    val paramCode:String
+    @SerializedName("id")
+    val id:String,
+
     @SerializedName("param")
      val param:Param
 )
