@@ -6,17 +6,17 @@
     <TextView
         android:id="@+id/station_of_sensor_name_layout"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="1dp"
         android:layout_marginTop="0dp"
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
-        android:textAlignment="center"
-        android:text="NameOfTheStation" />
+        android:text="NameOfTheStation"
+        android:textAlignment="center" />
 
     <LinearLayout
         android:id="@+id/sensorInfoRow_layout"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="65dp"
         android:orientation="horizontal">
 
         <TextView
@@ -25,11 +25,11 @@
             android:layout_height="match_parent"
             android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:paddingTop="6dp"
             android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:text="paramName"
             android:textAlignment="center"
-            android:textSize="14sp"
-            android:text="paramName" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/sensor_paramCode_layout"
@@ -38,11 +38,11 @@
             android:layout_marginTop="2dp"
             android:layout_weight="1"
             android:paddingLeft="10dp"
-            android:paddingTop="6dp"
+            android:paddingTop="20dp"
+            android:text="paramCode"
             android:textAlignment="center"
             android:textColor="#F44336"
-            android:textSize="14sp"
-            android:text="paramCode" />
+            android:textSize="14sp" />
     </LinearLayout>
 
 </LinearLayout>
