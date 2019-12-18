@@ -3,8 +3,10 @@ package com.example.airscanner
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ListView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_sensor_data.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -33,24 +35,26 @@ class SensorDataActivity : AppCompatActivity() {
             .build()
 
         val client = retrofit.create(SensorDataService::class.java)
+        Log.e("martha", sensorid.toString())
+        client.getSensorsData(sensorid).enqueue(object: Callback<SensorData> {
 
-        client.getSensorsData(sensorid).enqueue(object: Callback<List<SensorData>> {
-
-            override fun onFailure(call: Call<List<SensorData>>, t: Throwable) {
+            override fun onFailure(call: Call<SensorData>, t: Throwable) {
                 Toast.makeText(this@SensorDataActivity,"Failure: " + t.message, Toast.LENGTH_LONG).show()
-                Log.e("marta",t.message)
+                Thread.sleep(2000)
+                progressBar.visibility = View.GONE
+                Log.e("marta",t.message!!)
             }
 
-            override fun onResponse(call: Call<List<SensorData>>, response: Response<List<SensorData>>) {
-
-                //AddToListView(response.body()!!)
-                AddToListView(response.body()!!.values)
+            override fun onResponse(call: Call<SensorData>, response: Response<SensorData>) {
+                Thread.sleep(2000)
+                progressBar.visibility = View.GONE
+                AddToListView(response.body()!!)
             }
         })
 
     }
 
-    fun AddToListView(listview_sensorsdata: List<SensorData>){
+    fun AddToListView(listview_sensorsdata: SensorData){
         val listofSensorsData = listview_sensorsdata
         val adapter = SensorDataAdapter(this, listofSensorsData)
         listView3.adapter = adapter

@@ -8,6 +8,6 @@ interface SensorDataService{
 
     @GET("data/getData/{sensorId}")
 
-    fun getSensorsData(@Path("sensorId") sensorId: String): Call<List<SensorData>>
+    fun getSensorsData(@Path("sensorId") sensorId: String): Call<SensorData>
 
 }
